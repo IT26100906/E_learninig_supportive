@@ -1,0 +1,1 @@
+Shared core - needed by ALL parts (not part of one module): Main.java (embedded Tomcat), AppInitListener, DbConfig + db.properties (H2/MySQL), Json, AppConfig, DataMigrator, Page, web.xml, images, sample video, pom.xml, database schema, sample users, docs.
