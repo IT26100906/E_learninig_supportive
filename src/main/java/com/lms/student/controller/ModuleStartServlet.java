@@ -12,5 +12,6 @@ public class ModuleStartServlet extends HttpServlet {
       if ("admin".equals(role) || "student".equals(role)) req.getSession(true).setAttribute("demoRole",role);
     }
     res.sendRedirect(req.getContextPath()+"/course-feedback");
+    res.sendRedirect(req.getContextPath()+"/course-details");
   }
 }

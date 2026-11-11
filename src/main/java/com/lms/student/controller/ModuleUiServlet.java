@@ -25,6 +25,10 @@ import java.util.stream.Collectors;
 public class ModuleUiServlet extends BaseServlet {
 
     private static final Map<String, String> VIEWS = Map.of("/course-feedback", "modules/course-feedback");
+@WebServlet("/course-details")
+public class ModuleUiServlet extends BaseServlet {
+
+    private static final Map<String, String> VIEWS = Map.of("/course-details", "modules/course-details");
 
     /** Pages that look different for an admin. */
     private static final Map<String, String> ADMIN_VIEWS = Map.of();
