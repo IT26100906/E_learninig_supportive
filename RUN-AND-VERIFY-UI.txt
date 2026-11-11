@@ -1,0 +1,17 @@
+03-Course-Feedback — ORIGINAL UI static asset fix
+
+1. Stop any old server on port 8080.
+2. Open this folder containing pom.xml in IntelliJ IDEA.
+3. Reload Maven, execute Lifecycle > clean, compile.
+4. Run com.lms.student.Main and open http://localhost:8080/course-feedback.
+5. Hard-refresh using Ctrl+Shift+R.
+6. To test static assets, open: http://localhost:8080/css/style.css
+   http://localhost:8080/css/modules.css
+   http://localhost:8080/js/modules.js
+   http://localhost:8080/images/logo.svg
+7. If any static asset is 404, inspect browser F12 > Network.
+
+Student/Admin demo toggles are for local development in modules 02-07.
+01 Login/Signup/Home uses the original authentication/database setup.
+The supplied original JSP, CSS, JS and background images are preserved.
+Do not run separate member projects on the same port at once.
