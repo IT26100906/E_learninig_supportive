@@ -1,3 +1,4 @@
+# 06-Assignments — separated from ORIGINAL StudentApp ZIP
 # 05-Course-Enrollment
 
 This folder contains only this member's identified feature-specific source files (Java, JSP, and some JS). Paths are preserved so you can copy them into the full project.
@@ -15,4 +16,5 @@ Use Student View / Admin View (DEMO ONLY) to switch roles.
 Do not run two modules on port 8080 simultaneously; set VM option `-Dport=8081` on the second.
 These demo roles bypass real login; do NOT deploy publicly.
 
+Feature: assignments.
 Feature: course-details.

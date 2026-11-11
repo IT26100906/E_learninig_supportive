@@ -1,9 +1,11 @@
+06-Assignments — ORIGINAL UI static asset fix
 03-Course-Feedback — ORIGINAL UI static asset fix
 02-Course-Details — ORIGINAL UI static asset fix
 
 1. Stop any old server on port 8080.
 2. Open this folder containing pom.xml in IntelliJ IDEA.
 3. Reload Maven, execute Lifecycle > clean, compile.
+4. Run com.lms.student.Main and open http://localhost:8080/assignments.
 4. Run com.lms.student.Main and open http://localhost:8080/course-feedback.
 4. Run com.lms.student.Main and open http://localhost:8080/course-details.
 5. Hard-refresh using Ctrl+Shift+R.

@@ -1,3 +1,10 @@
+PART 06: Assignments
+Open THIS folder (not the parent ZIP folder) in IntelliJ IDEA as a Maven project.
+Run com.lms.student.Main, then open http://localhost:8080/ .
+This launches DIRECTLY into /assignments. No other member pages are included.
+Use Student View / Admin View in the top bar to preview this module's user/admin features.
+Course Details, Course Notes and Feedback manage their admin actions within the same page.
+The modules admin-assignments are bundled only with this part.
 PART 03: Course Feedback
 Open THIS folder (not the parent ZIP folder) in IntelliJ IDEA as a Maven project.
 Run com.lms.student.Main, then open http://localhost:8080/ .

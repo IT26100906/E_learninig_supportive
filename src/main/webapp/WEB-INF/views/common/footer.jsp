@@ -4,6 +4,7 @@
 <footer class="app-footer py-3 mt-4">
   <div class="container d-flex flex-wrap justify-content-between">
     <span>&copy; LearnHub &ndash; E-Learning Supportive System</span>
+    <span>Assignments module</span>
     <span>Course Feedback module</span>
     <span>Course Details module</span>
   </div>

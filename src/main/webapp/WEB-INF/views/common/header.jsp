@@ -53,6 +53,7 @@
           <span></span><span></span><span></span><span></span>
         </button>
       </c:if>
+      <a class="brand-link" href="${ctx}/assignments"><img src="${ctx}/images/logo.svg" alt=""><span>Learn<span class="hub">Hub</span></span></a>
       <a class="brand-link" href="${ctx}/course-feedback"><img src="${ctx}/images/logo.svg" alt=""><span>Learn<span class="hub">Hub</span></span></a>
       <a class="brand-link" href="${ctx}/course-details"><img src="${ctx}/images/logo.svg" alt=""><span>Learn<span class="hub">Hub</span></span></a>
       <%-- Premium students: a gold "Premium" tag right after the LearnHub name (regular students see nothing extra) --%>
@@ -74,6 +75,7 @@
 <div class="offcanvas offcanvas-start side-menu" tabindex="-1" id="sideMenu">
   <div class="offcanvas-header"><strong>Member Module</strong><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
   <div class="offcanvas-body pt-0"><nav class="d-flex flex-column">
+    <a class="side-link active" href="${ctx}/assignments"><span class="side-icon">&#128214;</span><span>Assignments</span></a>
     <a class="side-link active" href="${ctx}/course-feedback"><span class="side-icon">&#128214;</span><span>Course Feedback</span></a>
     <a class="side-link active" href="${ctx}/course-details"><span class="side-icon">&#128214;</span><span>Course Details</span></a>
     <a class="side-link" href="${ctx}/demo-role?role=student">Student View</a>
