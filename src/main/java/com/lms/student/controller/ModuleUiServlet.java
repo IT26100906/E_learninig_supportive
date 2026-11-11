@@ -21,6 +21,10 @@ import java.util.stream.Collectors;
  * Admins get their own management pages for Course Enrollment, Assignments and Payment (views/modules/admin-*.jsp):
  * enrollments, assignments + submissions + marks and payments of all students, split by learner level.
  */
+@WebServlet("/course-feedback")
+public class ModuleUiServlet extends BaseServlet {
+
+    private static final Map<String, String> VIEWS = Map.of("/course-feedback", "modules/course-feedback");
 @WebServlet("/course-details")
 public class ModuleUiServlet extends BaseServlet {
 
