@@ -1,0 +1,29 @@
+/* ===== LearnHub - readability safety net (loaded LAST, after liquid.css / dark.css) =====
+   Light mode uses dark liquid-glass panels with WHITE text, so any element that still gets a dark
+   colour (Bootstrap utility classes, native date / file inputs ...) would be hard or impossible to read.
+   These rules keep every text colour readable on the glass in BOTH light and dark mode. */
+
+/* utility classes that Bootstrap paints dark */
+body.liquid[class] .text-black, body.liquid[class] .text-dark, body.liquid[class] .text-body,
+body.liquid[class] .text-body-emphasis, body.liquid[class] .link-dark, body.liquid[class] .text-reset { color: #fff !important; }
+body.liquid[class] .text-secondary, body.liquid[class] .text-body-secondary, body.liquid[class] .text-black-50,
+body.liquid[class] .text-muted { color: rgba(255,255,255,.80) !important; }
+body.liquid[class] .text-danger  { color: #ffb4bd !important; }
+body.liquid[class] .text-success { color: #86efac !important; }
+body.liquid[class] .text-warning { color: #fde68a !important; }
+body.liquid[class] .text-primary, body.liquid[class] .text-info { color: #bfdbfe !important; }
+
+/* native controls: dark scheme => white date / time icons, scrollbars, checkboxes */
+body.liquid[class] .form-control, body.liquid[class] .form-select, body.liquid[class] textarea { color-scheme: dark; }
+body.liquid[class] input::file-selector-button { background: rgba(255,255,255,.22); color: #fff; border: 0; border-right: 1px solid rgba(255,255,255,.35); }
+body.liquid[class] .form-select option, body.liquid[class] select option { color: #0f172a !important; background: #fff !important; }
+
+/* light badges / buttons that have a light background keep DARK text */
+body.liquid[class] .badge.text-bg-light, body.liquid[class] .btn-warning, body.liquid[class] .btn-light { color: #111827 !important; text-shadow: none; }
+body.liquid[class] .btn-warning { background: #fcd34d !important; background-image: none !important; border-color: #fcd34d !important; }
+
+/* accordion-style <details> blocks */
+body.liquid[class] details, body.liquid[class] summary { color: #fff; }
+
+/* printing (receipts) always black on white */
+@media print { body.liquid[class] * { color: #000 !important; text-shadow: none !important; } }
