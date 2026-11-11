@@ -1,0 +1,23 @@
+COURSE NOTES – ORIGINAL UI, STATIC ASSET FIX
+
+1) Stop the OLD server from IntelliJ (red Stop button).
+2) Extract this NEW zip to a new folder.
+3) IntelliJ > File > Open > 04-Course-Notes (the folder with pom.xml).
+4) Maven > Reload All Projects, then Lifecycle > clean > compile.
+5) Run com.lms.student.Main.
+6) Open http://localhost:8080/course-notes and press Ctrl+Shift+R.
+7) Check these URLs, which MUST show files rather than 404/HTML:
+   http://localhost:8080/css/style.css
+   http://localhost:8080/css/modules.css
+   http://localhost:8080/images/main-bg.jpg
+   http://localhost:8080/js/modules.js
+   http://localhost:8080/js/courses.js
+   http://localhost:8080/js/store.js (dynamically provided by backend)
+
+EXPECTED: original glass-style LearnHub UI, themed background, material cards,
+Course Notes Student and Admin views. Admin uses LOCAL DEMO mode only.
+
+If still plain white: in browser F12 > Network check status codes for /css and /js.
+Make sure the OLD server is stopped before starting the new project.
+
+The original course-notes.jsp and all original CSS, JS and images are preserved.
