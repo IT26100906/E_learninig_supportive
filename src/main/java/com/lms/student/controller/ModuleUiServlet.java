@@ -28,6 +28,17 @@ public class ModuleUiServlet extends BaseServlet {
 
     /** Pages that look different for an admin. */
     private static final Map<String, String> ADMIN_VIEWS = Map.of("/assignments", "modules/admin-assignments");
+@WebServlet("/course-feedback")
+public class ModuleUiServlet extends BaseServlet {
+
+    private static final Map<String, String> VIEWS = Map.of("/course-feedback", "modules/course-feedback");
+@WebServlet("/course-details")
+public class ModuleUiServlet extends BaseServlet {
+
+    private static final Map<String, String> VIEWS = Map.of("/course-details", "modules/course-details");
+
+    /** Pages that look different for an admin. */
+    private static final Map<String, String> ADMIN_VIEWS = Map.of();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

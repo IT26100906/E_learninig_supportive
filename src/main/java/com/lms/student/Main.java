@@ -84,11 +84,15 @@ public class Main {
                 }
                 // IntelliJ may use the extracted ZIP parent as working directory.
                 File child = new File(d, "06-Assignments");
+                File child = new File(d, "03-Course-Feedback");
+                File child = new File(d, "02-Course-Details");
                 if (new File(child, "pom.xml").isFile() && new File(child, "src/main/webapp").isDirectory()) {
                     return child;
                 }
             }
         }
         throw new IllegalStateException("Could not locate 06-Assignments project. Open the folder containing pom.xml in IntelliJ IDEA.");
+        throw new IllegalStateException("Could not locate 03-Course-Feedback project. Open the folder containing pom.xml in IntelliJ IDEA.");
+        throw new IllegalStateException("Could not locate 02-Course-Details project. Open the folder containing pom.xml in IntelliJ IDEA.");
     }
 }

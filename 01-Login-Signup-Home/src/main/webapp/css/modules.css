@@ -1,0 +1,104 @@
+/* ===== LearnHub - styles for Feedback, Notes, Enrollment, Assignment and Payment pages =====
+   Uses neutral translucent colours so it looks right in light mode, dark mode and every learner theme. */
+
+.mod-hero { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding: 1.1rem 1.4rem; margin-bottom: 1.25rem; }
+.mod-hero .mod-title { display: flex; align-items: center; gap: 14px; }
+.mod-hero .mod-ico { width: 54px; height: 54px; border-radius: 18px; display: grid; place-items: center; font-size: 1.7rem;
+  background: linear-gradient(135deg, #1f7aff, #7c3aed); color: #fff; box-shadow: 0 8px 20px rgba(31,122,255,.35); }
+.mod-hero h3 { margin: 0; font-weight: 800; }
+.mod-hero p { margin: 0; opacity: .75; font-size: .92rem; }
+
+.mod-tile { background: rgba(127,127,127,.12); border: 1px solid rgba(127,127,127,.25); border-radius: 18px; padding: 1rem 1.1rem; }
+.mod-tile.hover { transition: transform .15s ease, box-shadow .15s ease; }
+.mod-tile.hover:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,.16); }
+
+.mod-filter { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.mod-filter .form-control, .mod-filter .form-select { max-width: 260px; }
+.mod-filter .grow { flex: 1 1 220px; max-width: none; }
+
+/* pill tabs */
+.mod-tabs { display: flex; flex-wrap: wrap; gap: .4rem; }
+.mod-tab { border: 1px solid rgba(127,127,127,.35); background: rgba(127,127,127,.10); color: inherit; border-radius: 999px;
+  padding: .35rem .95rem; font-weight: 600; font-size: .9rem; cursor: pointer; }
+.mod-tab:hover { background: rgba(31,122,255,.15); }
+.mod-tab.active { background: #1f7aff; border-color: #1f7aff; color: #fff; }
+.mod-tab .cnt { opacity: .8; font-weight: 500; margin-left: 4px; }
+
+/* stars */
+.stars { color: #f5a623; letter-spacing: 1px; white-space: nowrap; }
+.stars .off { color: rgba(127,127,127,.45); }
+.star-pick { display: inline-flex; flex-direction: row-reverse; gap: 4px; font-size: 2rem; line-height: 1; }
+.star-pick input { display: none; }
+.star-pick label { cursor: pointer; color: rgba(127,127,127,.5); transition: color .12s, transform .12s; }
+.star-pick label:hover, .star-pick label:hover ~ label, .star-pick input:checked ~ label { color: #f5a623; }
+.star-pick label:hover { transform: scale(1.15); }
+
+.bar-row { display: flex; align-items: center; gap: 10px; font-size: .88rem; }
+.bar-row .bar { flex: 1; height: 10px; border-radius: 999px; background: rgba(127,127,127,.25); overflow: hidden; }
+.bar-row .bar > i { display: block; height: 100%; background: linear-gradient(90deg, #f5a623, #f7c860); border-radius: 999px; }
+
+.avatar-chip { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; flex: none; }
+
+/* file-type icons */
+.ftype { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 1.5rem; color: #fff; flex: none; }
+.ft-pdf { background: linear-gradient(135deg,#ef4444,#f97316); }
+.ft-slides { background: linear-gradient(135deg,#f59e0b,#ef4444); }
+.ft-video { background: linear-gradient(135deg,#7c3aed,#ec4899); }
+.ft-link { background: linear-gradient(135deg,#0ea5e9,#22d3ee); }
+.ft-doc { background: linear-gradient(135deg,#2563eb,#38bdf8); }
+
+.course-banner { height: 92px; border-radius: 16px; display: grid; place-items: center; font-size: 2.4rem; color: #fff; margin-bottom: .8rem; }
+
+.chip { display: inline-block; padding: .15rem .6rem; border-radius: 999px; font-size: .78rem; font-weight: 600; background: rgba(127,127,127,.18); }
+.chip.green { background: rgba(34,197,94,.28); color: #86efac; }
+.chip.red { background: rgba(239,68,68,.30); color: #fecaca; }
+.chip.amber { background: rgba(245,166,35,.30); color: #fde68a; }
+.chip.blue { background: rgba(59,130,246,.32); color: #bfdbfe; }
+
+.empty-state { text-align: center; padding: 2.5rem 1rem; opacity: .7; }
+.empty-state i { font-size: 2.6rem; display: block; margin-bottom: .4rem; }
+
+/* payment */
+.pay-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+.pay-methods label { cursor: pointer; margin: 0; }
+.pay-methods input { display: none; }
+.pay-methods span { display: block; text-align: center; padding: .7rem .4rem; border-radius: 14px; font-weight: 600; font-size: .9rem;
+  border: 2px solid rgba(127,127,127,.3); background: rgba(127,127,127,.08); }
+.pay-methods input:checked + span { border-color: #1f7aff; background: rgba(31,122,255,.15); }
+.pay-methods i { display: block; font-size: 1.4rem; }
+.credit-card { border-radius: 20px; padding: 1.2rem 1.3rem; color: #fff; min-height: 150px; position: relative;
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed 60%, #ec4899); box-shadow: 0 12px 28px rgba(76,29,149,.4); }
+.credit-card .num { font-size: 1.25rem; letter-spacing: 3px; margin-top: 1.6rem; font-family: ui-monospace, Menlo, Consolas, monospace; }
+.credit-card .meta { display: flex; justify-content: space-between; margin-top: .8rem; font-size: .8rem; text-transform: uppercase; opacity: .9; }
+
+.deadline-ring { font-size: .8rem; font-weight: 700; }
+.progress.thin { height: 8px; }
+.toast-wrap { position: fixed; right: 18px; bottom: 18px; z-index: 2000; display: flex; flex-direction: column; gap: 8px; }
+.lh-toast { background: #111827; color: #fff; padding: .7rem 1rem; border-radius: 14px; box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  display: flex; gap: 10px; align-items: center; animation: lhin .2s ease; max-width: 340px; }
+.lh-toast.ok i { color: #4ade80; } .lh-toast.err i { color: #f87171; } .lh-toast.info i { color: #7db4ff; }
+@keyframes lhin { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.receipt { font-family: ui-monospace, Menlo, Consolas, monospace; }
+@media print {
+  body * { visibility: hidden !important; }
+  #receiptBody, #receiptBody * { visibility: visible !important; color: #000 !important; }
+  #receiptBody { position: absolute; left: 0; top: 0; width: 100%; }
+}
+@media (max-width: 576px) { .pay-methods { grid-template-columns: 1fr; } }
+
+/* course details: syllabus accordion */
+details.syl { border: 1px solid rgba(127,127,127,.35); background: rgba(127,127,127,.10); border-radius: 14px; padding: .65rem 1rem; margin-bottom: .5rem; }
+details.syl summary { cursor: pointer; font-weight: 600; list-style-position: inside; }
+details.syl[open] summary { margin-bottom: .35rem; }
+
+/* "Courses chosen for you" strip */
+.level-note { display: inline-flex; align-items: center; gap: 8px; margin: -.4rem 0 1.1rem; padding: .4rem 1rem; border-radius: 999px;
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.45); font-size: .92rem; }
+
+@keyframes lhpulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,212,121,.0); } 50% { box-shadow: 0 0 0 8px rgba(255,212,121,.65); } }
+.card.pulse { animation: lhpulse 1s ease-in-out 3; }
+
+/* Premium tag next to the LearnHub brand */
+.premium-tag{display:inline-flex;align-items:center;gap:.3rem;margin-left:.65rem;padding:.18rem .65rem;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#4a3200!important;background:linear-gradient(135deg,#ffe28a,#f5b301);box-shadow:0 2px 8px rgba(245,179,1,.45);white-space:nowrap}
+.premium-tag i{font-size:.7rem}

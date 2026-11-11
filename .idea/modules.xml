@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/05-Course-Enrollment.iml" filepath="$PROJECT_DIR$/05-Course-Enrollment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Part01_Login_Home_Admin_Student_Management_FIXED.iml" filepath="$PROJECT_DIR$/.idea/Part01_Login_Home_Admin_Student_Management_FIXED.iml" />
+    </modules>
+  </component>
+</project>
