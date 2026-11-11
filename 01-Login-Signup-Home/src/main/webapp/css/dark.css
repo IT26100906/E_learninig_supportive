@@ -1,0 +1,209 @@
+/* =====================================================================
+   LearnHub - DARK MODE
+   Active when <body class="dark"> / <html class="dark-pre"> (toggle button
+   in the navbar, remembered in localStorage). Switches the page background to
+   images/dark-bg.jpg (light mode uses images/home-bg.jpg), with dark tinted glass panels.
+   ===================================================================== */
+
+.theme-toggle {
+  width: 42px; height: 42px; border-radius: 50%; cursor: pointer; font-size: 1.1rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #0f172a; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.65);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(15,23,42,.18), inset 0 1px 0 rgba(255,255,255,.7);
+  transition: .15s;
+}
+.theme-toggle:hover { background: rgba(255,255,255,.5); transform: translateY(-1px); }
+
+html.dark-pre { color-scheme: dark; }
+
+/* ---------- dark-mode photo (2nd image) ---------- */
+html.dark-pre body.frosted[class] {
+  background: url('../images/dark-bg.jpg') center / cover fixed no-repeat !important;
+}
+html.dark-pre body.frosted[class]::before {
+  display: block !important; content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(135deg, rgba(5,8,20,.28), rgba(8,12,28,.20)) !important;
+}
+html.dark-pre body.frosted { color: #e5e7eb; }
+
+/* ---------- panels ---------- */
+html.dark-pre body.frosted[class] .card,
+html.dark-pre body.frosted[class] .glass-bar,
+html.dark-pre body.frosted[class] .glass-card,
+html.dark-pre body.frosted[class] .welcome-banner,
+html.dark-pre body.frosted[class] .child-hero,
+html.dark-pre body.frosted[class] .school-banner,
+html.dark-pre body.frosted[class] .al-banner,
+html.dark-pre body.frosted[class] .modal-content {
+  color: #e5e7eb !important;
+  background-color: rgba(14,20,38,.55) !important;
+  background-image: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.01) 55%, rgba(255,255,255,.04)) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  box-shadow: 0 18px 42px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+html.dark-pre body.frosted[class] .card { --bs-card-color: #e5e7eb; --bs-card-cap-color: #f3f4f6; }
+html.dark-pre body.frosted[class] .card-header {
+  background: rgba(255,255,255,.05) !important; color: #f3f4f6 !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+}
+html.dark-pre body.frosted[class] .card-footer { background: rgba(255,255,255,.04) !important; border-top: 1px solid rgba(255,255,255,.12) !important; }
+
+/* inner tiles */
+html.dark-pre body.frosted[class] .subject-tile,
+html.dark-pre body.frosted[class] .child-big-btn,
+html.dark-pre body.frosted[class] .subject-card,
+html.dark-pre body.frosted[class] .al-tool,
+html.dark-pre body.frosted[class] .al-subject,
+html.dark-pre body.frosted[class] .card.bg-light,
+html.dark-pre body.frosted[class] .lc-body {
+  color: #e5e7eb !important;
+  background-color: rgba(255,255,255,.07) !important;
+  background-image: none !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.12) !important;
+}
+html.dark-pre body.frosted[class] .subject-tile:hover,
+html.dark-pre body.frosted[class] .child-big-btn:hover,
+html.dark-pre body.frosted[class] .subject-card:hover,
+html.dark-pre body.frosted[class] .al-tool:hover,
+html.dark-pre body.frosted[class] .al-subject:hover,
+html.dark-pre body.frosted[class] .level-card:hover .lc-body { background-color: rgba(255,255,255,.14) !important; }
+html.dark-pre body.frosted[class] .level-card input:checked + .lc-body {
+  background-color: rgba(96,165,250,.22) !important; border-color: rgba(147,197,253,.8) !important;
+  box-shadow: 0 0 0 2px rgba(96,165,250,.55), 0 10px 22px rgba(0,0,0,.4) !important;
+}
+html.dark-pre body.frosted[class] .lc-body small { color: #9ca3af !important; }
+
+/* coloured stat cards (like the reference) */
+html.dark-pre body.frosted[class] .card.stat-card { background-color: rgba(59,91,219,.30) !important; border-color: rgba(120,150,255,.40) !important; }
+html.dark-pre body.frosted[class] .card.stat-card.green { background-color: rgba(22,163,74,.28) !important; border-color: rgba(74,222,128,.40) !important; }
+html.dark-pre body.frosted[class] .card.stat-card.red   { background-color: rgba(220,38,38,.28) !important; border-color: rgba(248,113,113,.40) !important; }
+html.dark-pre body.frosted[class] .card.stat-card.amber { background-color: rgba(217,160,20,.30) !important; border-color: rgba(251,191,36,.45) !important; }
+html.dark-pre body.frosted[class] .card.stat-card.cyan  { background-color: rgba(124,58,237,.30) !important; border-color: rgba(167,139,250,.45) !important; }
+/* the 4 level counters on the admin dashboard */
+html.dark-pre body.frosted[class] .row > .col-md-3:nth-child(1) > .card.text-center { background-color: rgba(217,119,6,.20) !important; border-color: rgba(251,191,36,.35) !important; }
+html.dark-pre body.frosted[class] .row > .col-md-3:nth-child(2) > .card.text-center { background-color: rgba(219,39,119,.20) !important; border-color: rgba(244,114,182,.35) !important; }
+html.dark-pre body.frosted[class] .row > .col-md-3:nth-child(3) > .card.text-center { background-color: rgba(8,145,178,.24) !important; border-color: rgba(34,211,238,.45) !important; }
+html.dark-pre body.frosted[class] .row > .col-md-3:nth-child(4) > .card.text-center { background-color: rgba(109,40,217,.24) !important; border-color: rgba(167,139,250,.40) !important; }
+
+/* ---------- navbar / menu / footer ---------- */
+html.dark-pre body.frosted[class] .app-navbar {
+  background-color: rgba(8,12,26,.55) !important; background-image: none !important;
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.45) !important;
+}
+html.dark-pre body.frosted[class] .app-navbar .brand-link,
+html.dark-pre body.frosted[class] .app-navbar .nav-link,
+html.dark-pre body.frosted[class] .app-navbar .dropdown-toggle,
+html.dark-pre body.frosted[class] .app-navbar a:not(.btn) { color: #f3f4f6 !important; }
+html.dark-pre body.frosted[class] .app-navbar .brand-link .hub,
+html.dark-pre body.frosted[class] .side-menu .brand-link .hub { color: #fbbf24 !important; }
+html.dark-pre body.frosted[class] .menu-btn span { background: #f3f4f6 !important; }
+html.dark-pre body.frosted[class] .menu-btn:hover { background: rgba(255,255,255,.14) !important; }
+html.dark-pre .theme-toggle { color: #fde68a; background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.25); box-shadow: 0 4px 14px rgba(0,0,0,.4); }
+html.dark-pre .theme-toggle:hover { background: rgba(255,255,255,.18); }
+
+html.dark-pre body.frosted[class] .dropdown-menu {
+  background-color: rgba(14,20,38,.88) !important; background-image: none !important;
+  border: 1px solid rgba(255,255,255,.16) !important; box-shadow: 0 18px 40px rgba(0,0,0,.55) !important;
+}
+html.dark-pre body.frosted[class] .dropdown-item { color: #e5e7eb !important; }
+html.dark-pre body.frosted[class] .dropdown-item:hover { background: rgba(255,255,255,.12) !important; }
+html.dark-pre body.frosted[class] .dropdown-item.text-danger { color: #f87171 !important; }
+html.dark-pre body.frosted[class] .dropdown-divider { border-top-color: rgba(255,255,255,.15); }
+
+html.dark-pre body.frosted[class] .side-menu {
+  --bs-offcanvas-bg: rgba(10,15,30,.85) !important; background-color: rgba(10,15,30,.85) !important; background-image: none !important;
+  color: #e5e7eb !important; border-right: 1px solid rgba(255,255,255,.14) !important;
+}
+html.dark-pre body.frosted[class] .side-link { color: #d1d5db !important; }
+html.dark-pre body.frosted[class] .side-link:hover { background: rgba(255,255,255,.10) !important; }
+html.dark-pre body.frosted[class] .side-link.active { background: rgba(251,191,36,.20) !important; color: #fde68a !important; box-shadow: none; }
+html.dark-pre body.frosted[class] .btn-close { filter: invert(1) grayscale(1) brightness(1.6); }
+
+html.dark-pre body.frosted[class] footer.app-footer {
+  background-color: rgba(8,12,26,.55) !important; background-image: none !important; color: #9ca3af !important;
+  border-top: 1px solid rgba(255,255,255,.12) !important;
+}
+
+/* ---------- text ---------- */
+html.dark-pre body.frosted[class] .text-muted,
+html.dark-pre body.frosted[class] .form-text,
+html.dark-pre body.frosted[class] .al-tool small,
+html.dark-pre body.frosted[class] .detail-label { color: #9ca3af !important; }
+html.dark-pre body.frosted[class] .glabel,
+html.dark-pre body.frosted[class] .form-label { color: #e5e7eb !important; }
+html.dark-pre body.frosted[class] .glass-title { color: #f9fafb; text-shadow: none; }
+html.dark-pre body.frosted[class] .glass-links a { color: #d1d5db; }
+html.dark-pre body.frosted[class] .glass-links a:hover { color: #fff; }
+html.dark-pre body.frosted[class] .child-title,
+html.dark-pre body.frosted[class] .school-heading,
+html.dark-pre body.frosted[class] .al-heading { color: #f3f4f6 !important; text-shadow: 0 1px 4px rgba(0,0,0,.6); }
+html.dark-pre body.frosted[class] h1, html.dark-pre body.frosted[class] h2, html.dark-pre body.frosted[class] h3,
+html.dark-pre body.frosted[class] h4, html.dark-pre body.frosted[class] h5, html.dark-pre body.frosted[class] h6 { color: #f3f4f6; }
+html.dark-pre body.frosted[class] .text-brand { color: #fbbf24 !important; }
+html.dark-pre body.frosted[class] .gicon { color: #fde68a; background: rgba(255,255,255,.10) !important; border: 1px solid rgba(255,255,255,.22); box-shadow: none; }
+html.dark-pre body.frosted[class] .stat-card .gicon { color: #fff; }
+html.dark-pre body.frosted[class] a:not(.btn):not(.side-link):not(.dropdown-item):not(.brand-link):not(.nav-link) { color: #93c5fd; }
+
+/* ---------- forms ---------- */
+html.dark-pre body.frosted[class] .gfield,
+html.dark-pre body.frosted[class] .form-control,
+html.dark-pre body.frosted[class] .form-select,
+html.dark-pre body.frosted[class] .input-group {
+  color: #f3f4f6 !important; background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.22) !important; box-shadow: inset 0 1px 4px rgba(0,0,0,.3) !important;
+}
+html.dark-pre body.frosted[class] .gfield input,
+html.dark-pre body.frosted[class] .gfield select { color: #f3f4f6; background: transparent; }
+html.dark-pre body.frosted[class] .gfield:focus-within,
+html.dark-pre body.frosted[class] .form-control:focus,
+html.dark-pre body.frosted[class] .form-select:focus,
+html.dark-pre body.frosted[class] .input-group:focus-within {
+  background: rgba(255,255,255,.14) !important; border-color: rgba(147,197,253,.8) !important;
+  box-shadow: 0 0 0 .2rem rgba(96,165,250,.25) !important;
+}
+html.dark-pre body.frosted[class] .gfield input::placeholder,
+html.dark-pre body.frosted[class] .form-control::placeholder { color: #9ca3af; }
+html.dark-pre body.frosted[class] .gfield select option,
+html.dark-pre body.frosted[class] .form-select option { color: #0f172a; background: #fff; }
+html.dark-pre body.frosted[class] .gtoggle { color: #d1d5db; }
+
+/* ---------- buttons ---------- */
+html.dark-pre body.frosted[class] .btn-primary {
+  background: linear-gradient(180deg, #3b82f6, #1d4ed8) !important; border: 1px solid rgba(255,255,255,.25) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.4), inset 0 1px 1px rgba(255,255,255,.3) !important;
+}
+html.dark-pre body.frosted[class] .btn-primary:hover { background: linear-gradient(180deg, #2563eb, #1e40af) !important; }
+html.dark-pre body.frosted[class] .btn-outline-primary,
+html.dark-pre body.frosted[class] .btn-outline-secondary,
+html.dark-pre body.frosted[class] .btn-outline-warning,
+html.dark-pre body.frosted[class] .btn-outline-success {
+  color: #e5e7eb !important; background: rgba(255,255,255,.06) !important; border: 1px solid rgba(255,255,255,.30) !important;
+  box-shadow: none !important;
+}
+html.dark-pre body.frosted[class] .btn-outline-primary:hover,
+html.dark-pre body.frosted[class] .btn-outline-secondary:hover { background: rgba(255,255,255,.16) !important; color: #fff !important; }
+html.dark-pre body.frosted[class] .btn-outline-danger { color: #f87171 !important; background: rgba(255,255,255,.04) !important; border-color: rgba(248,113,113,.5) !important; box-shadow: none !important; }
+html.dark-pre body.frosted[class] .gbtn {
+  color: #f3f4f6 !important; background-image: none !important; background-color: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.30) !important; box-shadow: 0 8px 20px rgba(0,0,0,.35) !important;
+}
+html.dark-pre body.frosted[class] .gbtn:hover { background-color: rgba(255,255,255,.22) !important; color: #fff !important; }
+
+/* ---------- tables, alerts, misc ---------- */
+html.dark-pre body.frosted[class] .table { --bs-table-bg: transparent; --bs-table-color: #e5e7eb; --bs-table-hover-bg: rgba(255,255,255,.07); --bs-table-hover-color: #fff; --bs-table-striped-bg: rgba(255,255,255,.04); color: #e5e7eb; }
+html.dark-pre body.frosted[class] .table-light { --bs-table-bg: rgba(255,255,255,.05); --bs-table-color: #f3f4f6; color: #f3f4f6; }
+html.dark-pre body.frosted[class] .table > :not(caption) > * > * { border-bottom-color: rgba(255,255,255,.10); color: inherit; }
+html.dark-pre body.frosted[class] .table-hover > tbody > tr:hover > * { --bs-table-bg-state: rgba(255,255,255,.07); color: #fff; }
+html.dark-pre body.frosted[class] .alert-success { background: rgba(22,101,52,.45); color: #bbf7d0; border-color: rgba(74,222,128,.4); }
+html.dark-pre body.frosted[class] .alert-danger  { background: rgba(127,29,29,.50); color: #fecaca; border-color: rgba(248,113,113,.4); }
+html.dark-pre body.frosted[class] .alert-warning { background: rgba(120,53,15,.50); color: #fde68a; border-color: rgba(251,191,36,.4); }
+html.dark-pre body.frosted[class] .alert-info    { background: rgba(12,74,110,.50); color: #bae6fd; border-color: rgba(56,189,248,.4); }
+html.dark-pre body.frosted[class] .progress { background: rgba(255,255,255,.12); }
+html.dark-pre body.frosted[class] .detail-row { border-bottom-color: rgba(255,255,255,.12); }
+html.dark-pre body.frosted[class] .page-link { background: rgba(255,255,255,.06); color: #e5e7eb; border-color: rgba(255,255,255,.18); }
+html.dark-pre body.frosted[class] .page-item.active .page-link { background: #2563eb; border-color: #2563eb; color: #fff; }
+html.dark-pre body.frosted[class] .page-item.disabled .page-link { color: #6b7280; }
+html.dark-pre body.frosted[class] hr { border-color: rgba(255,255,255,.2); }
