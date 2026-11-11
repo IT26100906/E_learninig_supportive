@@ -1,7 +1,0 @@
-target/
-.idea/
-*.iml
-data/users.txt.tmp
-data/lmsdb*
-data/*.imported
-data/uploads/
